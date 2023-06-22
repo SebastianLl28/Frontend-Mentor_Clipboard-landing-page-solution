@@ -19,6 +19,10 @@
     />
   </head>
   <body>
+    <div class="theme">
+      <div class="theme__icon"></div>
+    </div>
+    <!-- Cambiar a un div -->
     <img
       class="bg-header"
       src="./images/bg-header-desktop.png"
@@ -194,34 +198,48 @@
         />
         <nav class="nav">
           <ul class="nav__list">
-            <li class="nav__element"><a href="#">FAQs</a></li>
-            <li class="nav__element"><a href="#">Contact Us</a></li>
-            <li class="nav__element"><a href="#">Privacy Policy</a></li>
-            <li class="nav__element"><a href="#">Press Kit</a></li>
-            <li class="nav__element"><a href="#">Install Guide</a></li>
+            <li class="nav__element"><a class="nav__link" href="#">FAQs</a></li>
+            <li class="nav__element">
+              <a class="nav__link" href="#">Contact Us</a>
+            </li>
+            <li class="nav__element">
+              <a class="nav__link" href="#">Privacy Policy</a>
+            </li>
+            <li class="nav__element">
+              <a class="nav__link" href="#">Press Kit</a>
+            </li>
+            <li class="nav__element">
+              <a class="nav__link" href="#">Install Guide</a>
+            </li>
           </ul>
         </nav>
         <ul class="icons">
           <li>
-            <img
-              class="icons__icon"
-              src="./images/icon-facebook.svg"
-              alt="icon facebook"
-            />
+            <a href="#">
+              <img
+                class="icons__icon"
+                src="./images/icon-facebook.svg"
+                alt="icon facebook"
+              />
+            </a>
           </li>
           <li>
-            <img
-              class="icons__icon"
-              src="./images/icon-twitter.svg"
-              alt="icon twitter"
-            />
+            <a href="#">
+              <img
+                class="icons__icon"
+                src="./images/icon-twitter.svg"
+                alt="icon twitter"
+              />
+            </a>
           </li>
           <li>
-            <img
-              class="icons__icon"
-              src="./images/icon-instagram.svg"
-              alt="icon instagram"
-            />
+            <a href="#">
+              <img
+                class="icons__icon"
+                src="./images/icon-instagram.svg"
+                alt="icon instagram"
+              />
+            </a>
           </li>
         </ul>
       </div>

@@ -112,6 +112,7 @@ body {
   min-height: 100vh;
   font-size: 100%;
   font-family: "Bai Jamjuree", sans-serif;
+  transition: background-color 0.3s ease;
 }
 /* End Reset Css */
 
@@ -129,7 +130,16 @@ body {
   --fontNormal: 1.2em;
   --fontSmall: 0.8em;
   --padding: 0;
+  --footerColor: #f5f6f8;
 }
+
+:root .dark {
+  background-color: #181818;
+  --Terceary100: #fff;
+  --Terceary200: #dfdfdf;
+  --footerColor: #3d3d3d;
+}
+
 .container-sm {
   width: 100%;
   max-width: 800px;
@@ -304,7 +314,7 @@ body {
 /* FOOTER */
 .footer {
   width: 100%;
-  background-color: #f5f6f8;
+  background-color: var(--footerColor);
   padding: 5rem var(--padding);
 }
 
@@ -336,6 +346,10 @@ body {
   /* grid-auto-columns: ; */
   row-gap: 1.5rem;
   font-size: var(--fontNormal);
+}
+
+.nav__link:hover {
+  color: var(--Primary);
 }
 
 /* ICONS */
@@ -418,4 +432,41 @@ body {
     --fontTitle: 1.9em;
     --padding: 1.2rem;
   }
+}
+
+.theme {
+  width: 4rem;
+  height: 4rem;
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  background-color: #f2f2f2;
+  border: 1px solid #000;
+  border-radius: 50%;
+  display: flex;
+  box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  transition: scale 0.2s ease;
+}
+
+.theme:hover {
+  scale: 1.2;
+}
+
+.theme__icon {
+  width: 50%;
+  height: 50%;
+  margin: auto;
+  background-image: url("../images/icon-moon.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.dark > .theme > .theme__icon {
+  background-image: url("../images/icon-sun.svg");
+}
+
+.dark .theme {
+  background-color: #444444;
 }
